@@ -1,0 +1,81 @@
+.wrapper{
+    margin: 5px;
+}
+
+.face{ 
+    width: 75px;
+    height: 75px;
+    background-color: yellow;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+.lefteye{
+  width: 6px;
+  height: 6px;
+  border: solid 1px black;
+  border-radius: 3px;
+  z-index: 1;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  background-color: black;
+}
+
+#inner-left {
+    width: 2px;
+    height: 2px;
+    border: solid 1px white;
+    position: static; 
+    top: 2px;
+    background-color: white;
+  }
+
+  .righteye {
+    width: 6px;
+    height: 6px;
+    border: solid 1px black;
+    border-radius: 3px;
+    z-index: 1;
+    position: relative;
+    left:20px;
+    top: 1
+    <div class="mouth"></div>0px;
+    background-color: black;
+  }
+
+  #inner-right {
+    width: 2px;
+    height: 2px;
+    border: solid 1px white;
+    position: relative;
+    left: 2px;
+    top: 2px;
+    background-color: white;
+  }
+
+  .mouth {
+    width: 30px;
+    height: 7px;
+    border: solid 1px black;
+    border-radius: 45px 45px 5px 5px; 
+    margin: 15px;
+    position: relative;
+    top: 0em; 
+    left: -3em;
+    background-color: black;
+  }
+  .mustache {
+    width: 20px;
+    height: 3px;
+    border: solid 1px rosybrown;
+    border-radius: 45px 45px 5px 5px; 
+    margin: 15px;
+    position: relative;
+    top: -1em; 
+    left: -1em;
+    background-color: brown;
+  }
+  .hair {
+      width: 40px
+      height: 3px
+  }
