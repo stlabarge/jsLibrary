@@ -1,8 +1,16 @@
+function captializeName(name) {
+    let capName = '';
+    for (let l in name){
+      if (l == 0){
+        capName += name[l].toUpperCase();
+      } else {
+        capName += name[l].toLowerCase();
+      }
+    }
+ 
+    return capName
+  }
 
-function tipCalc(bill) {
-    let tip = (bill *0.2);
-    return tip.toFixed(2);
-}
+const myNameIs =  captializeName('Autumn');
 
-let totalTip = tipCalc(19.88);
-console.log(totalTip)
+console.log(`${myNameIs} how are you doing?`);
