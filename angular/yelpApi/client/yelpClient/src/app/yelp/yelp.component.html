@@ -1,0 +1,52 @@
+<h1>Tina EAT YOUR FOOD</h1>
+
+<form [formGroup]="infoForm" (submit)="onSubmit()">
+  <label> City </label>
+  <input placeholder="city" formControlName="city" type="text" required>
+  <label> State </label>
+  <input placeholder="state" formControlName="state" type="text" required>
+  <label> Pricing </label>
+  <select placeholder="$$" formControlName="pricingInfo" required>
+    <option value=1>$</option>
+    <option value=2>$$</option>
+    <option value=3>$$$</option>
+    <option value=4>$$$$</option>
+
+  </select>
+  <button type="submit">GO!</button>
+</form>
+
+<div class="results">
+  <div *ngIf="displayInfo">
+    <div>
+      <img src="{{displayInfo.image_url}}">
+      <h3>{{displayInfo.name}}</h3>
+      <h3>{{displayInfo.location.display_address}}</h3>
+      <h3>{{displayInfo.display_phone}}</h3>
+      <h3>{{displayInfo.transactions}}</h3>
+      <!-- <h3>{{displayInfo.rating}}</h3> -->
+      <h6>
+        <img *ngIf="displayInfo.rating === 0"
+          src="../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_0.png">
+        <img *ngIf="displayInfo.rating === 1"
+          src="../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_1.png">
+        <img *ngIf="displayInfo.rating === 1.5"
+          src="../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_1_half.png">
+        <img *ngIf="displayInfo.rating === 2"
+          src="../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_2.png">
+        <img *ngIf="displayInfo.rating === 2.5"
+          src=".../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_2_half.png">
+        <img *ngIf="displayInfo.rating === 3"
+          src="../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_3.png">
+        <img *ngIf="displayInfo.rating === 3.5"
+          src="../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_3_half.png">
+        <img *ngIf="displayInfo.rating === 4"
+          src="../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_4.png">
+        <img *ngIf="displayInfo.rating === 4.5"
+          src="../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_4_half.png">
+        <img *ngIf="displayInfo.rating === 5"
+          src=".../../assets/yelp_stars/yelp_stars/web_and_ios/regular/regular_5.png">
+      </h6>
+    </div>
+  </div>
+</div>
